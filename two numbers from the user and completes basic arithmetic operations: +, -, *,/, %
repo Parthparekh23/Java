@@ -1,0 +1,24 @@
+import java.util.Scanner;
+public class Main {
+                                            
+    public static void main(String args[]) {
+        int firstValue;
+        int secondValue;
+        int result;
+        Scanner n = new Scanner(System.in);
+            System.out.println("Enter the first value: ");
+        firstValue = n.nextInt();
+            System.out.println("Enter the second value: ");
+        secondValue = n.nextInt();
+        result = firstValue + secondValue;
+            System.out.println("nSUM " + result);
+        result = firstValue - secondValue;
+            System.out.println("Difference " + result);
+        result = firstValue * secondValue;
+            System.out.println("Multiplied " + result);
+        result = firstValue / secondValue;
+            System.out.println("Division " + result);
+        result = firstValue % secondValue;
+            System.out.println("Modular " + result);
+    }
+}
