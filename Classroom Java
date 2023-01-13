@@ -1,0 +1,74 @@
+public class Teacher
+{
+    String subject;
+    public Teacher (String subject) {this.subject=subject;}
+
+    public String teachers()
+    {return this.subject;}
+}
+
+--------------------------------------------------------------
+
+public class MathTeacher extends Teacher{
+    String position;
+    String collegeName;
+
+    public MathTeacher(String subject, String position, String collegeName)
+    {
+        super(subject);
+        this.position = position;
+        this.collegeName = collegeName;
+    }
+    public String getPosition()
+    { return position;}
+
+    public String getCollegeName() {
+        return collegeName;
+    }
+}
+
+--------------------------------------------------------------
+
+public class MusicTeacher extends Teacher
+{
+    String position;
+    String collegeName;
+
+    public MusicTeacher(String subject, String position, String collegeName){
+        super(subject);
+        this.position = position;
+        this.collegeName = collegeName;
+    }
+
+    public String getPosition() {
+        return position;
+    }
+
+    public String getCollegeName() {
+        return collegeName;
+    }
+}
+
+--------------------------------------------------------------
+
+public class InformaticsTeacher extends Teacher
+{
+    String position;
+    String collegeName;
+
+
+    public InformaticsTeacher(String subject, String position, String collegeName) {
+        super(subject);
+    }
+
+    public String getPosition() {
+        return position;
+    }
+
+    public String getCollegeName() {
+        return collegeName;
+    }
+}
+
+
+
