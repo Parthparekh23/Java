@@ -1,0 +1,10 @@
+public class Main {
+
+    public static void main(String[] args) {
+   int increment = 4, decrement = 4;
+    increment++;
+    decrement--;
+        System.out.println("Increment " + increment);
+        System.out.println("Decrement " + decrement);
+    }
+}
