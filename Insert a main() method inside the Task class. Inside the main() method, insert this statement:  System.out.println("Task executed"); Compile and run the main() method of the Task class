@@ -1,0 +1,55 @@
+import java.util.Scanner;
+
+import static java.lang.Math.*;
+import exercises.task3.*;
+
+public class Task {
+    public static void main(String[] args){
+        System.out.println("Task executed");
+
+        int[] firstArr = {1, 2, 3};
+        int[] secondArr = {1, 2, 3, 4, 5};
+        int[] thirdArr = {1, 2, 3, 4, 5, 6, 7};
+
+        DataTask firstData= new DataTask(firstArr);
+        DataTask secondData = new DataTask(secondArr);
+        DataTask thirdData = new DataTask(thirdArr);
+
+        int firstMax = firstData.getArr()[0];
+        int secondMax = secondData.getArr()[0];
+        int thirdMax = thirdData.getArr()[0];
+        int firstMin = secondData.getArr()[0];
+        int secondMin = secondData.getArr()[0];
+        int thirdMin = thirdData.getArr()[0];
+
+        for (int i = 0; i < firstData.getArr().length; i++){
+            firstMax = max(firstMax, firstData.getArr()[i]);
+            firstMin = min(firstMin, firstData.getArr()[i]);
+        }
+        for (int i = 0; i < secondData.getArr().length; i++){
+            secondMax = max(secondMax, secondData.getArr()[i]);
+            secondMin = min(secondMin, secondData.getArr()[i]);
+        }
+        for (int i = 0; i < thirdData.getArr().length; i++){
+            thirdMax= max(thirdMax, thirdData.getArr()[i]);
+            thirdMin = min(thirdMin, thirdData.getArr()[i]);
+        }
+        System.out.println("Max:" + firstMax + "Min:" + firstMin);
+        System.out.println("Max:" + secondMax + "Min:" + firstMin);
+        System.out.println("Max:" + thirdMax + "Min:" + firstMin);
+
+        Scanner in = new Scanner(System.in);
+        System.out.println("Please given radius ");
+        double radius= in.nextInt();
+        double area= PI * (sqrt(radius));
+        System.out.println("Area " + area);
+
+        MathTeacher mt = new MathTeacher("Mathmetics", "Teacher", "IV Patel" );
+        InformaticsTeacher it = new InformaticsTeacher("Informatics", "Teacher", "Cz Patel");
+
+        String mtPosition = mt.getPosition();
+        String mtCollegeName = mt.getCollegeName();
+
+        System.out.println(mt.teachers() + "-" + mtPosition + "-" + mtCollegeName);
+    }
+}
